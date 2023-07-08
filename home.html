@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="lista.css" />
+  </head>
+  <body>
+    <h1>Gerenciamento de Reservas</h1>
+    <div class="logoutButton" ><button id="logout">Logout</button></div>
+    <div class="reservas-container">
+      <table class="tabela-reservas" border="1">
+        <thead>
+          <tr>
+            <th>N. Quarto</th>
+            <th>Cliente</th>
+            <th class="linhaCpf">CPF</th>
+            <th>Período</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="corpo-tabela">
+        </tbody>
+      </table>
+    </div>
+
+    <script src="scripts/home.js" type="module"></script>
+  </body>
+</html>

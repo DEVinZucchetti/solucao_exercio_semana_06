@@ -1,0 +1,99 @@
+/* lista-style.css */
+
+/* Reset de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.reservas-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.tabela-reservas {
+  width: 100%;
+  max-width: 85%;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  overflow: scroll;
+}
+
+.tabela-reservas th,
+.tabela-reservas td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.tabela-reservas th {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.tabela-reservas tbody tr:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+.logoutButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.linhaCpf {
+  min-width: 135px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .tabela-reservas {
+    padding: 10px;
+  }
+}
