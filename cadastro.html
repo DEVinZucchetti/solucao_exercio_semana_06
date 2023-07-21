@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cadastro.css" />
+</head>
+
+<body>
+    <form  id="form-add" class="main-cadastro">
+        <h1>Nova Reserva</h1>
+
+        <label for="n-quarto">
+            <span>N° Quarto:</span>
+            <select id="n-quarto">
+                <option value="120">Quarto 120</option>
+                <option value="121">Quarto 121</option>
+                <option value="122">Quarto 122</option>
+                <option value="123">Quarto 123</option>
+            </select>
+        </label>
+
+        <label for="nome">
+            <span>Nome:</span>
+            <input type="text" id="nome">
+        </label>
+
+        <label for="cpf">
+            <span>CPF:</span>
+            <input type="text" id="cpf">
+        </label>
+
+        <label for="datain">
+            <span>Entrada:</span>
+            <input type="date" id="datain">
+        </label>
+
+        <label for="dataout">
+            <span>Saida:</span>
+            <input type="date" id="dataout">
+        </label>
+
+        <button type="submit" id="botaologin">Cadastrar</button>
+    </form>
+
+    <script type="module" src="./scripts/cadastro.js"></script>
+</body>
+
+</html>
