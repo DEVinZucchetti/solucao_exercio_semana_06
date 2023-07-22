@@ -9,10 +9,6 @@ document.addEventListener('submit', (event) => {
     if (!email || !senha) {
         alert("Os campos obrigatórios")
     } else {
-
-        console.log(email)
-        console.log(senha)
-
         const usuarioEncontrado = usuarios.find(
             usuario =>
                 usuario.email === email && usuario.senha === senha
@@ -21,10 +17,8 @@ document.addEventListener('submit', (event) => {
         if(usuarioEncontrado) {  
              window.location.href = "home.html"
             // redireciona usuario
-          
         } else {
             alert("Usuário não encontrado")
         }
     }
-
 })

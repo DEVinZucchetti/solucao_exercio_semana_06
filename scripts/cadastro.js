@@ -18,7 +18,6 @@ function cadastrarReserva(event) {
     if (!numero || !nome || !cpf || !dataEntrada || !dataSaida) {
         alert("Preencha todos os campos")
     } else {
-        console.log("entrrei aqui")
         // 1 - URL da api
         // 2 - informar o método
         // 3 - informar o corpo da requisição
@@ -30,18 +29,25 @@ function cadastrarReserva(event) {
         fetch('http://localhost:3000/reservas', {
             method: 'POST',
             body: JSON.stringify({
-                numero: numero,
-                nome: nome,
+                numero_quarto: numero,
+                nome_cliente: nome,
                 cpf: cpf,
-                dataEntrada: dataEntrada,
-                dataSaida: dataSaida
+                data_entrada: dataEntrada,
+                data_saida: dataSaida
             }),
             headers: {
                 'Accept': 'applicantion/json',
                 'Content-Type': 'application/json'
             }
         })
+            .then((response) => {
+                if (response.ok === false) {
+                    throw new Error()
+                }
+                return response.json()
+            })
             .then(() => {
+                console.log("entrei aqui no then")
                 alert('Cadastrado com sucesso')
 
                 campoNumeroQuarto.value = ""
